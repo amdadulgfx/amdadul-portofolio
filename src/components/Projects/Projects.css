@@ -7,7 +7,6 @@ margin-right: 5px;
 
 .project-btn{
     background-color: transparent;
-    color: white;
     text-decoration: none;
     padding: 5px 12px;
     /* font-weight: bold; */
@@ -16,10 +15,18 @@ margin-right: 5px;
     text-transform: uppercase;
     transition: 0.3s;
     margin-right: 10px;
+    margin-top: 10px;
+}
+.project-btn a{
+    text-decoration: none;
+    color: white;
+}
+.project-btn a:hover{
+   
+    color: white;
 }
 .project-btn:hover{
     border: 1px solid rgba(145, 194, 46, 0.74);
     background-color: rgba(145, 194, 46, 0.74);
-
     color: white;
 }

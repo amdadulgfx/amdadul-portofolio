@@ -24,7 +24,7 @@ const NavigationBar = () => {
                             <Link className='navLink' to="/aboutMe">About Me</Link>
                             <Link className='navLink' to="/skills">Skills</Link>
                             <Link className='navLink' to="/projects">Projects</Link>
-                            <Link className='navLink' to="/contact">Contact Me</Link>
+                            <Link className='navLink' to="/contactMe">Contact Me</Link>
                         </Nav>
                         <Nav className='resume'>
                             <a
