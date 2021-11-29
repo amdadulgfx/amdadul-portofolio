@@ -1,0 +1,25 @@
+.technology span{
+background-color: rgba(145, 194, 46, 0.74);
+padding: 5px 10px;
+border-radius: 10px;
+margin-right: 5px;
+}
+
+.project-btn{
+    background-color: transparent;
+    color: white;
+    text-decoration: none;
+    padding: 5px 12px;
+    /* font-weight: bold; */
+    border: 1px solid rgba(145, 194, 46, 0.74);
+    border-radius: 10px;
+    text-transform: uppercase;
+    transition: 0.3s;
+    margin-right: 10px;
+}
+.project-btn:hover{
+    border: 1px solid rgba(145, 194, 46, 0.74);
+    background-color: rgba(145, 194, 46, 0.74);
+
+    color: white;
+}
