@@ -10,6 +10,43 @@ import camperienceSs3 from '../../images/camperience (3).png'
 import eyeplus1 from '../../images/eyeplus (1).png'
 import eyeplus2 from '../../images/eyeplus (2).png'
 import eyeplus3 from '../../images/eyeplus (3).png'
+
+const projectsData = [
+    {
+        id: 1010,
+        name: 'Clay Kingdom',
+        description: "This is a pottery shop site. In this site user can purchase any product, give a review and they also can cancel the order. Admins Can make another admin, add product with details, delete any product.",
+        liveSite: 'https://clay-kingdom.web.app/',
+        clientSide: 'https://github.com/amdadulgfx/clay-kingdom-pottery-shop',
+        serverSide: 'https://github.com/amdadulgfx/clay-kingdom-pottery-shop-server',
+        img1: clayKingdomSs1,
+        img2: clayKingdomSs2,
+        img3: clayKingdomSs3,
+    },
+    {
+        id: 1011,
+        name: 'Camperience',
+        description: "This is a travel agency type site where people can see where they can camp and its information. They can register for a camp. To do this operation they have to login first.",
+        liveSite: 'https://camperience-6e1ea.web.app/',
+        clientSide: 'https://github.com/amdadulgfx/camperience-connect-to-the-nature',
+        serverSide: 'https://github.com/amdadulgfx/camperience-server',
+        img1: camperienceSs1,
+        img2: camperienceSs2,
+        img3: camperienceSs3,
+    },
+    {
+        id: 1012,
+        name: 'Eye Plus Care',
+        description: "This is demo site for eye care service. When user wants to see the details of eye care service they need to login first. Login System implemented with firebase.",
+        liveSite: 'https://eyeplus-care.web.app/',
+        clientSide: 'https://github.com/amdadulgfx/eye-medical-care',
+        serverSide: '',
+        img1: eyeplus1,
+        img2: eyeplus2,
+        img3: eyeplus3,
+    },
+
+]
 const Projects = () => {
     return (
         <Container>
