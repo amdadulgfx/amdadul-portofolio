@@ -14,7 +14,7 @@ const NavigationBar = () => {
 
     return (
         <div >
-            <Navbar collapseOnSelect style={bgNav} expand="lg"  >
+            <Navbar collapseOnSelect style={bgNav} expand="lg" className="navbar-dark" >
                 <Container >
                     <Link to="/" className='navLink' style={logoStyle}>A</Link>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
