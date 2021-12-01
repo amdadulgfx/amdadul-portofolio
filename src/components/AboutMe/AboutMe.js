@@ -11,6 +11,15 @@ const AboutMe = () => {
                             <h3>Hello, This is MD Amdadul Haq Arif</h3>
                             <p>
                                 I am a  front-end developer. I'm focused on building websites with JavaScript, specifically React.js. And I love to learn and implement modern technologies on projects. </p>
+                            <h2>SKILLS</h2>
+                            <div className='technology d-flex flex-wrap'>
+                                <span>React JS</span>
+                                <span>JavaScript(ES6)</span>
+                                <span>CSS</span>
+                                <span>HTML</span>
+                                <span>Bootstrap 5</span>
+                                <span>Firebase</span>
+                            </div>
                         </div>
                     </Col>
                     <Col className='d-flex justify-content-center align-items-center'>

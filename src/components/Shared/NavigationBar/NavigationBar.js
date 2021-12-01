@@ -22,7 +22,6 @@ const NavigationBar = () => {
                         <Nav className="mx-auto">
                             <Link className='navLink' to="/home">Home</Link>
                             <Link className='navLink' to="/aboutMe">About Me</Link>
-                            <Link className='navLink' to="/skills">Skills</Link>
                             <Link className='navLink' to="/projects">Projects</Link>
                             <Link className='navLink' to="/blogs">Blogs</Link>
                             <Link className='navLink' to="/contactMe">Contact Me</Link>
