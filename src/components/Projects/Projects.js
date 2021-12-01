@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Carousel, Col, Container, Row } from 'react-bootstrap';
 import './Projects.css'
 import clayKingdomSs1 from '../../images/clay-kingdom (1).png'
@@ -10,7 +10,8 @@ import camperienceSs3 from '../../images/camperience (3).png'
 import eyeplus1 from '../../images/eyeplus (1).png'
 import eyeplus2 from '../../images/eyeplus (2).png'
 import eyeplus3 from '../../images/eyeplus (3).png'
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const projectsData = [
     {
         id: 1010,
@@ -48,13 +49,17 @@ const projectsData = [
 
 ]
 const Projects = () => {
+    useEffect(() => {
+        AOS.init();
+    }, []);
     return (
         <Container>
-            <div style={{ paddingBottom: "100px" }}>
-                <h2 className='text-white text-center fw-bolder fs-1 pb-5'>My Projects</h2>
+            <div data-aos="zoom-in-down" data-aos-duration="1000"
+                style={{ paddingBottom: "100px" }}>
+                <h2 className='text-white text-center fw-bolder fs-1 py-5'>My Projects</h2>
                 <Row md={2} xs={1} >
-                    <Col>
-                        <Carousel variant='dark'>
+                    <Col >
+                        <Carousel variant='dark' indicators={false}>
                             <Carousel.Item interval={3000} >
                                 <img style={{ height: '250px', objectFit: 'cover' }}
                                     className="d-block w-100"
@@ -78,7 +83,8 @@ const Projects = () => {
                             </Carousel.Item>
                         </Carousel>
                     </Col>
-                    <Col className='text-white technology'>
+                    <Col
+                        className='text-white technology'>
                         <h4>Clay Kingdom</h4>
                         <p>
                             This is a pottery shop site. In this site user can purchase any product, give a review and they also can cancel the order. Admins Can make another admin, add product with details, delete any product.
@@ -120,8 +126,8 @@ const Projects = () => {
                     </Col>
                 </Row>
                 <Row className='my-5' md={2} xs={1}>
-                    <Col>
-                        <Carousel variant='dark'>
+                    <Col >
+                        <Carousel variant='dark' indicators={false}>
                             <Carousel.Item interval={5000} >
                                 <img style={{ height: '250px', objectFit: 'cover' }}
                                     className="d-block w-100"
@@ -193,8 +199,8 @@ const Projects = () => {
                     </Col>
                 </Row>
                 <Row className='my-5' md={2} xs={1}>
-                    <Col>
-                        <Carousel variant='dark'>
+                    <Col >
+                        <Carousel variant='dark' indicators={false}>
                             <Carousel.Item interval={6000} >
                                 <img style={{ height: '250px', objectFit: 'cover' }}
                                     className="d-block w-100"
