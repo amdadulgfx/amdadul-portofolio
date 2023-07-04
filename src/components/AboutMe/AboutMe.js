@@ -42,9 +42,6 @@ const AboutMe = () => {
                     </div>
                 </Col>
                 <Col data-aos="fade-left" data-aos-duration="1000" md={3} >
-                    <div style={{}}>
-
-                    </div>
                     <img className='' style={{ borderRadius: '400px', border: '2px solid yellow', height: '200px', }} src={myPic} alt="" />
                     <div>
                         <h2>SKILLS</h2>
