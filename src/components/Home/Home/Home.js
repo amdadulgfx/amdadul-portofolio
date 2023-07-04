@@ -16,7 +16,7 @@ const Home = () => {
     }, []);
     return (
         <Container>
-            <div style={{ height: '250px', justifyContent: 'space-between', display: 'flex', color: 'white', marginTop: '80px', marginLeft: '100px', marginRight: '100px' }}>
+            <div style={{ height: '220px', justifyContent: 'space-between', display: 'flex', color: 'white', marginTop: '80px', marginLeft: '100px', marginRight: '100px' }}>
 
                 <div className='d-flex'>
                     <div data-aos="fade-up" data-aos-duration="1000" className='title-border'></div>
