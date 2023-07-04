@@ -10,10 +10,11 @@ const NavigationBar = () => {
     }
     const bgNav = {
         backgroundColor: '#090726',
+        // margin: '100px'
     }
 
     return (
-        <div >
+        <div style={{ position: 'fixed', top: 0, width: '100%', zIndex: 1, }}>
             <Navbar collapseOnSelect style={bgNav} expand="lg" className="navbar-dark" >
                 <Container >
                     <Link to="/" className='navLink' style={logoStyle}>A</Link>

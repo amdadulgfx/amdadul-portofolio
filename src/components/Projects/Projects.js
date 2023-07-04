@@ -56,7 +56,7 @@ const Projects = () => {
         <Container>
             <div data-aos="zoom-in-down" data-aos-duration="1000"
                 style={{ paddingBottom: "100px" }}>
-                <h2 className='text-white text-center fw-bolder fs-1 py-5'>My Projects</h2>
+                <h2 className='text-white text-center fw-bolder fs-1 py-5' style={{ marginTop: '25px' }}>My Projects</h2>
                 <Row md={2} xs={1} >
                     <Col >
                         <Carousel variant='dark' indicators={false}>

@@ -1,14 +1,14 @@
 .footer {
-    position: absolute;
+    position: fixed;
     padding: 10px 10px 0px 10px;
     bottom: 0;
     width: 100%;
-    /* Height of the footer*/ 
+    /* Height of the footer*/
     height: 60px;
     background: #090726;
 }
 
-.social-icon{
+.social-icon {
     font-size: 30px;
     color: white;
     padding: 0px 10px;
@@ -16,7 +16,7 @@
 
 }
 
-.social-icon:hover{
+.social-icon:hover {
     color: yellowgreen;
     border: 1px solid yellowgreen;
     border-radius: 5px;

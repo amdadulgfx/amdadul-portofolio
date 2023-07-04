@@ -6,6 +6,8 @@ import './Home.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Typewriter from 'typewriter-effect';
+import myPic from '../../../images/arif.png';
+
 
 const Home = () => {
 
@@ -14,7 +16,8 @@ const Home = () => {
     }, []);
     return (
         <Container>
-            <div className='d-flex justify-content-center align-items-center  text-white ' style={{ height: '400px' }}>
+            <div style={{ height: '250px', justifyContent: 'space-between', display: 'flex', color: 'white', marginTop: '80px', marginLeft: '100px', marginRight: '100px' }}>
+
                 <div className='d-flex'>
                     <div data-aos="fade-up" data-aos-duration="1000" className='title-border'></div>
                     <div>
@@ -25,7 +28,7 @@ const Home = () => {
                         <h3>
                             <Typewriter
                                 options={{
-                                    strings: ['Front-End Developer', 'JavaScript Developer', 'I Love Coding'],
+                                    strings: ['Full Stack Developer', 'JavaScript Developer', 'I Love Coding'],
                                     autoStart: true,
                                     loop: true,
                                 }}
@@ -34,6 +37,25 @@ const Home = () => {
 
                         <Link to='/contactMe'><button className='regular-btn' >Hire Me</button></Link>
                     </div>
+                </div>
+                <img className='' style={{ borderRadius: '400px', border: '2px solid yellow', height: '200px', }} src={myPic} alt="" />
+            </div>
+            <div className='text-white' style={{ color: 'white', marginLeft: '100px', marginRight: '100px', }}>
+                <h2>SKILLS</h2>
+                <div className='technology d-flex flex-wrap '>
+                    <span>JavaScript(ES6)</span>
+                    <span>TypeScript</span>
+                    <span>Node JS</span>
+                    <span>React JS</span>
+                    <span>AWS Cloud</span>
+                    <span>GraphQL</span>
+                    <span>MySQL</span>
+                    <span>MongoDB</span>
+                    <span>Firebase</span>
+                    <span>Material UI</span>
+                    <span>Bootstrap 5</span>
+                    <span>CSS</span>
+                    <span>HTML</span>
                 </div>
             </div>
             <Projects></Projects>
