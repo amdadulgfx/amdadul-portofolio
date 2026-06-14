@@ -34,7 +34,7 @@ const Home = () => {
                             />
                         </h3>
 
-                        <Link to='/contactMe'><button className='regular-btn' >Hire Me</button></Link>
+                        <Link to='/contactMe'><button className='regular-btn' >Contact Me</button></Link>
                     </div>
                 </Col>
                 <Col className='d-flex justify-content-center align-items-center' xs={12} md={6}>
