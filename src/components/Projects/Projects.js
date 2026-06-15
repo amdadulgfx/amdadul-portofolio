@@ -12,7 +12,7 @@ import eyeplus2 from '../../images/eyeplus (2).png'
 import eyeplus3 from '../../images/eyeplus (3).png'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-const projectsData = [
+export const projectsData = [
     {
         id: 1010,
         name: 'Clay Kingdom',
