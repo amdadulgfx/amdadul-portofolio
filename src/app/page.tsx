@@ -288,22 +288,20 @@ export default async function Home() {
         </Section>
       </div>
 
-      {/* ---------------- Field notes ---------------- */}
-      <Section
-        id="notes"
-        eyebrow="Field notes"
-        title="Lessons I'd pass on"
-        intro="Short stories from real incidents and design debates."
-      >
-        <div className="grid gap-5 md:grid-cols-2">
-          {notes.map((n) => (
-            <article key={n.title} className="rounded-2xl border border-line bg-surface p-6 sm:p-7">
-              <p className="font-mono text-xs text-accent">{n.tag}</p>
-              <h3 className="mt-3 text-lg font-semibold">{n.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted">{n.body}</p>
-            </article>
+      {/* ---------------- How I work ---------------- */}
+      <Section id="notes" eyebrow="How I work" title="Principles I build by">
+        <ol className="grid gap-px overflow-hidden rounded-2xl border border-line bg-line md:grid-cols-2">
+          {notes.map((n, i) => (
+            <li key={n.title} className="bg-surface p-6 sm:p-8">
+              <div className="flex items-center gap-3 font-mono text-xs">
+                <span className="text-accent">{String(i + 1).padStart(2, "0")}</span>
+                <span className="text-muted">{n.tag}</span>
+              </div>
+              <h3 className="mt-4 text-xl font-semibold tracking-tight sm:text-2xl">{n.title}</h3>
+              <p className="mt-3 max-w-md text-sm leading-relaxed text-muted">{n.body}</p>
+            </li>
           ))}
-        </div>
+        </ol>
       </Section>
 
       {/* ---------------- About ---------------- */}
