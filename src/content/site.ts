@@ -12,7 +12,7 @@ export const profile = {
   shortName: "Arif",
   role: "Senior Full Stack Engineer",
   location: "Dhaka, Bangladesh",
-  availability: "Open to senior roles · Remote",
+  status: "Project Lead at Gain Solutions Ltd · Dhaka, UTC+6",
   email: "arifhaq24m@gmail.com",
   url: "https://aharif.xyz",
   // Resume lives on Google Drive so it can be updated without redeploying.

@@ -25,7 +25,7 @@ export default async function Home() {
           <div>
             <p className="rise inline-flex items-center gap-2 rounded-full border border-line bg-surface/80 px-3 py-1.5 font-mono text-xs text-muted">
               <span className="pulse-dot relative inline-block size-2 rounded-full bg-ok" />
-              {profile.availability}
+              {profile.status}
             </p>
             <h1 className="rise rise-2 mt-6 text-4xl font-semibold tracking-tight text-balance sm:text-6xl">
               {profile.name}
@@ -379,10 +379,11 @@ export default async function Home() {
           <div className="glow pointer-events-none absolute inset-0" aria-hidden />
           <p className="relative font-mono text-xs uppercase tracking-[0.18em] text-accent">Contact</p>
           <h2 className="relative mx-auto mt-4 max-w-2xl text-3xl font-semibold tracking-tight text-balance sm:text-5xl">
-            Building something that needs to scale?
+            Let&apos;s talk engineering
           </h2>
           <p className="relative mx-auto mt-5 max-w-xl text-muted text-pretty">
-            I&apos;m open to senior full stack and backend roles, remote or hybrid. The fastest way to reach me is email.
+            Questions about an article, an architecture problem you&apos;re chewing on, or just want to connect? I always
+            enjoy talking system design, databases and AWS with other engineers. Email is the fastest way to reach me.
           </p>
           <div className="relative mt-8 flex flex-wrap items-center justify-center gap-3">
             <a
