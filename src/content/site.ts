@@ -27,13 +27,6 @@ export const profile = {
   },
 };
 
-export const stats = [
-  { value: "4+", label: "years shipping production SaaS" },
-  { value: "50k+", label: "users on a platform I led" },
-  { value: "35%", label: "faster responses from SQL work" },
-  { value: "50%+", label: "API cost cut with a custom PDF engine" },
-];
-
 export type Job = {
   company: string;
   location: string;

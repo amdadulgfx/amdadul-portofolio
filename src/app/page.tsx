@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Section from "@/components/Section";
 import { ArrowRight, ArrowUpRight, Download, GitHub, LinkedIn, Mail, Medium } from "@/components/Icons";
-import { education, experience, extras, features, products, profile, skills, stats } from "@/content/site";
+import { education, experience, extras, features, products, profile, skills } from "@/content/site";
 import { caseStudies } from "@/content/work";
 import { notes } from "@/content/notes";
 import { getArticles } from "@/lib/medium";
@@ -72,17 +72,6 @@ export default async function Home() {
           </div>
         </div>
 
-        {/* Stats */}
-        <div className="relative mx-auto max-w-6xl px-5 pb-8 sm:px-8">
-          <dl className="grid grid-cols-2 overflow-hidden rounded-2xl border border-line bg-line gap-px lg:grid-cols-4">
-            {stats.map((s) => (
-              <div key={s.label} className="flex flex-col bg-surface p-5 sm:p-6">
-                <dt className="order-2 mt-1 text-sm text-muted">{s.label}</dt>
-                <dd className="font-mono text-2xl font-semibold text-fg sm:text-3xl">{s.value}</dd>
-              </div>
-            ))}
-          </dl>
-        </div>
       </section>
 
       {/* ---------------- Products ---------------- */}
