@@ -181,7 +181,7 @@ export default async function Home() {
         <Section
           id="experience"
           eyebrow="Experience"
-          title="Four years, four product teams"
+          title="Built to scale. Shipped to production."
           action={
             <a href={profile.resume} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm text-muted hover:text-fg">
               <Download className="size-4 text-accent" /> View resume
