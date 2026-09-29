@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Section from "@/components/Section";
 import { ArrowRight, ArrowUpRight, Download, GitHub, LinkedIn, Mail, Medium } from "@/components/Icons";
-import { education, experience, extras, features, products, profile, skills } from "@/content/site";
+import { education, experience, experienceYears, extras, features, products, profile, skills } from "@/content/site";
 import { caseStudies } from "@/content/work";
 import { notes } from "@/content/notes";
 import { getArticles } from "@/lib/medium";
@@ -311,7 +311,7 @@ export default async function Home() {
             <div className="space-y-5 text-lg leading-relaxed text-fg/85 text-pretty">
               <p>
                 I&apos;m a full stack engineer from Dhaka who ended up specialising in the backend: data models, APIs,
-                queues and the AWS plumbing that keeps them running. I&apos;ve spent the last four years on SaaS products
+                queues and the AWS plumbing that keeps them running. I&apos;ve spent the last {experienceYears} years on SaaS products
                 for teams in Bangladesh, India and Australia — CRM, HR, recruitment and change management.
               </p>
               <p>

@@ -7,6 +7,13 @@ export const features = {
   caseStudies: false,
 };
 
+// Years of experience, counted from the first job (Mar 2022) and rounded DOWN to the
+// nearest half year, so it never overstates. Recomputed on every build/deploy.
+const CAREER_START = new Date("2022-03-01T00:00:00Z");
+const yearsExact = (Date.now() - CAREER_START.getTime()) / (365.25 * 24 * 3600 * 1000);
+export const experienceYears = Math.floor(yearsExact * 2) / 2; // e.g. 4.5
+export const experienceLabel = `${experienceYears}+ years`; // e.g. "4.5+ years"
+
 export const profile = {
   name: "Md Amdadul Haq Arif",
   shortName: "Arif",
@@ -19,7 +26,7 @@ export const profile = {
   resume: "https://drive.google.com/file/d/1QLmOzO6R8am0b7IgiT4vAp-AmeiQeTzj/view?usp=sharing",
   headline: "I design and ship backends that stay fast as the data grows.",
   intro:
-    "Senior full stack engineer with 4+ years building SaaS products on Node.js, PostgreSQL and AWS — and the React front ends that sit on top of them. Currently Backend Project Lead at Gain Solutions Ltd, where I own the architecture of an enterprise CRM.",
+    `Senior full stack engineer with ${experienceLabel} building SaaS products on Node.js, PostgreSQL and AWS — and the React front ends that sit on top of them. Currently Backend Project Lead at Gain Solutions Ltd, where I own the architecture of an enterprise CRM.`,
   socials: {
     github: "https://github.com/amdadulgfx",
     linkedin: "https://www.linkedin.com/in/amdadulgfx/",
