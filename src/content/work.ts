@@ -24,9 +24,9 @@ export const caseStudies: CaseStudy[] = [
     slug: "enterprise-crm",
     title: "Gain.io: a CRM that scales from thousands to millions of records",
     product: { name: "gain.io", url: "https://gain.io" },
-    company: "Gain Solutions",
+    company: "Gain Solutions Ltd",
     role: "Backend Project Lead",
-    period: "2023 — Present",
+    period: "2024 — Present",
     summary:
       "Hybrid ECS + serverless architecture for a sales CRM, with a self-scaling queue pattern that keeps the core API responsive during heavy data syncs.",
     tags: ["Node.js", "GraphQL", "PostgreSQL", "AWS ECS", "Lambda", "SQS", "EventBridge"],
@@ -95,7 +95,7 @@ export const caseStudies: CaseStudy[] = [
     slug: "email-analytics",
     title: "Email analytics when the provider gives you none",
     product: { name: "gain.io", url: "https://gain.io" },
-    company: "Gain Solutions",
+    company: "Gain Solutions Ltd",
     role: "Backend Project Lead",
     period: "CRM feature",
     summary:

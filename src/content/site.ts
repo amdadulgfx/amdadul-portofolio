@@ -18,7 +18,7 @@ export const profile = {
   resume: "/Amdadul-Haq-Arif-Resume.pdf",
   headline: "I design and ship backends that stay fast as the data grows.",
   intro:
-    "Senior full stack engineer with 4+ years building SaaS products on Node.js, PostgreSQL and AWS — and the React front ends that sit on top of them. Currently Backend Project Lead at Gain Solutions, where I own the architecture of an enterprise CRM.",
+    "Senior full stack engineer with 4+ years building SaaS products on Node.js, PostgreSQL and AWS — and the React front ends that sit on top of them. Currently Backend Project Lead at Gain Solutions Ltd, where I own the architecture of an enterprise CRM.",
   socials: {
     github: "https://github.com/amdadulgfx",
     linkedin: "https://www.linkedin.com/in/amdadulgfx/",
@@ -47,10 +47,10 @@ export type Job = {
 
 export const experience: Job[] = [
   {
-    company: "Gain Solutions",
+    company: "Gain Solutions Ltd",
     location: "Dhaka, Bangladesh",
     role: "Backend Developer · Project Lead",
-    period: "Nov 2023 — Present",
+    period: "Nov 2024 — Present",
     current: true,
     summary:
       "Lead backend engineer on Gain.io, a CRM + helpdesk platform, and on modernising Payrun, an HR and payroll platform.",
@@ -148,8 +148,8 @@ export const products: Product[] = [
     url: "https://gain.io",
     domain: "gain.io",
     image: "/products/gain.webp",
-    company: "Gain Solutions",
-    period: "2023 — Present",
+    company: "Gain Solutions Ltd",
+    period: "2024 — Present",
     tagline: "CRM and helpdesk in one customer record",
     description:
       "Sales pipeline, deals, offers and meetings alongside tickets, live chat, SLAs and CSAT — with email and calendar integrations and mobile apps.",
@@ -162,8 +162,8 @@ export const products: Product[] = [
     url: "https://payrun.app",
     domain: "payrun.app",
     image: "/products/payrun.webp",
-    company: "Gain Solutions",
-    period: "2023 — Present",
+    company: "Gain Solutions Ltd",
+    period: "2024 — Present",
     tagline: "All-in-one HR and payroll platform",
     description:
       "Employee management, attendance and timesheets, leave, hiring, payroll and expenses for growing teams across 150+ countries.",
