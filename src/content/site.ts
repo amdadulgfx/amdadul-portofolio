@@ -102,10 +102,10 @@ export const experience: Job[] = [
     period: "Mar 2022 — Oct 2022",
     summary: "Built web and mobile apps end-to-end in an agile team.",
     highlights: [
-      "Delivered features across React, React Native and Node.js services on PostgreSQL and MySQL.",
+      "Delivered features across React, React Native and Node.js services on PostgreSQL, MySQL and AWS.",
       "Fixed critical production bugs and hardened APIs for performance and stability.",
     ],
-    stack: ["React", "React Native", "Material UI", "Node.js", "PostgreSQL", "GraphQL"],
+    stack: ["React", "React Native", "Material UI", "Node.js", "PostgreSQL", "GraphQL", "AWS"],
   },
 ];
 
@@ -182,7 +182,7 @@ export const products: Product[] = [
     description:
       "A job marketplace connecting doctors, nurses, pharmacists and lab technicians with verified healthcare employers.",
     role: "Engineering lead: built and launched the platform on a serverless GraphQL backend; grew past 50,000 users.",
-    stack: ["Node.js", "AppSync", "Lambda", "MySQL"],
+    stack: ["Node.js", "AWS AppSync", "Lambda", "MySQL"],
     caseStudy: "medlink-recruitment",
   },
 ];

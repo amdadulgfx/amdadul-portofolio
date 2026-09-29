@@ -125,10 +125,6 @@ export default async function Home() {
                   {p.company} · {p.period}
                 </p>
                 <p className="mt-3 text-sm leading-relaxed text-fg/85">{p.description}</p>
-                <p className="mt-4 text-sm leading-relaxed text-muted">
-                  <span className="text-accent">My role — </span>
-                  {p.role}
-                </p>
                 <p className="mt-4 font-mono text-[11px] text-muted">{p.stack.join(" · ")}</p>
                 <div className="mt-auto flex flex-wrap items-center gap-x-5 gap-y-2 pt-6 text-sm">
                   <a href={p.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-fg hover:text-accent">
