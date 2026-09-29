@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #09090b;
+  --color-surface: #111114;
+  --color-raised: #17171b;
+  --color-line: #232329;
+  --color-fg: #ececef;
+  --color-muted: #8d8d98;
+  --color-accent: #f5b83d;
+  --color-accent-soft: #f5b83d1f;
+  --color-ok: #4ade80;
+}
+
+/* `inline` so utilities resolve the next/font variables set on <html> */
+@theme inline {
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+html {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-fg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: #09090b;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* Subtle engineering grid behind the hero */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, #ffffff08 1px, transparent 1px),
+    linear-gradient(to bottom, #ffffff08 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, #000 40%, transparent 100%);
+}
+
+.glow {
+  background: radial-gradient(600px circle at 20% 0%, #f5b83d14, transparent 60%);
+}
+
+/* Reveal-on-load, respecting reduced motion */
+@media (prefers-reduced-motion: no-preference) {
+  .rise {
+    animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+  .rise-2 { animation-delay: 0.08s; }
+  .rise-3 { animation-delay: 0.16s; }
+  .rise-4 { animation-delay: 0.24s; }
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: none; }
+  }
+  .pulse-dot::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 9999px;
+    background: var(--color-ok);
+    animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+  @keyframes ping {
+    75%, 100% { transform: scale(2.4); opacity: 0; }
+  }
+}
+
+/* ---------- Architecture diagrams ---------- */
+.diagram .edge {
+  stroke: var(--color-muted);
+  stroke-width: 1.4;
+  fill: none;
+}
+.diagram .edge-accent { stroke: var(--color-accent); }
+.diagram .edge-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  fill: var(--color-muted);
+  paint-order: stroke;
+  stroke: var(--color-surface);
+  stroke-width: 5px;
+}
+.diagram .node rect {
+  fill: var(--color-raised);
+  stroke: var(--color-line);
+  stroke-width: 1.2;
+}
+.diagram .node-label {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  fill: var(--color-fg);
+}
+.diagram .node-sub {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  fill: var(--color-muted);
+}
+.diagram .node-service rect { stroke: #f5b83d80; }
+.diagram .node-queue rect { stroke: #a78bfa99; }
+.diagram .node-data rect { stroke: #38bdf899; }
+.diagram .node-external rect { stroke-dasharray: 4 4; stroke: #52525b; }
+.diagram .node-removed rect { stroke-dasharray: 4 4; stroke: #3f3f46; fill: transparent; }
+.diagram .node-removed .node-label { fill: var(--color-muted); text-decoration: line-through; }
+
+.legend-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  border: 1.5px solid var(--color-line);
+}
+.legend-service { border-color: #f5b83d; }
+.legend-queue { border-color: #a78bfa; }
+.legend-data { border-color: #38bdf8; }
+.legend-client { border-color: #52525b; }
+.legend-external, .legend-removed { border-style: dashed; border-color: #71717a; }
