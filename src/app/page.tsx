@@ -108,14 +108,20 @@ export default async function Home() {
                     https://{p.domain}
                   </span>
                 </div>
-                <div className="relative px-6 py-8">
-                  <div className="glow pointer-events-none absolute inset-0 opacity-70" aria-hidden />
-                  <p className="relative text-2xl font-semibold tracking-tight">{p.name}</p>
-                  <p className="relative mt-1 text-sm text-muted">{p.tagline}</p>
+                <div className="aspect-[16/9] overflow-hidden">
+                  <Image
+                    src={p.image}
+                    alt={`${p.name} homepage`}
+                    width={800}
+                    height={450}
+                    className="size-full object-cover object-top opacity-90 transition duration-500 group-hover:scale-[1.03] group-hover:opacity-100"
+                  />
                 </div>
               </a>
               <div className="flex flex-1 flex-col p-6">
-                <p className="font-mono text-xs text-muted">
+                <h3 className="text-xl font-semibold tracking-tight">{p.name}</h3>
+                <p className="mt-1 text-sm text-muted">{p.tagline}</p>
+                <p className="mt-4 font-mono text-xs text-muted">
                   {p.company} · {p.period}
                 </p>
                 <p className="mt-3 text-sm leading-relaxed text-fg/85">{p.description}</p>

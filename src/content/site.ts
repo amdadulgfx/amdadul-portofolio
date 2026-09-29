@@ -125,6 +125,7 @@ export type Product = {
   name: string;
   url: string;
   domain: string;
+  image: string;
   company: string;
   period: string;
   tagline: string;
@@ -139,6 +140,7 @@ export const products: Product[] = [
     name: "Gain.io",
     url: "https://gain.io",
     domain: "gain.io",
+    image: "/products/gain.webp",
     company: "Gain Solutions",
     period: "2023 — Present",
     tagline: "CRM and helpdesk in one customer record",
@@ -152,6 +154,7 @@ export const products: Product[] = [
     name: "Payrun",
     url: "https://payrun.app",
     domain: "payrun.app",
+    image: "/products/payrun.webp",
     company: "Gain Solutions",
     period: "2023 — Present",
     tagline: "All-in-one HR and payroll platform",
@@ -164,6 +167,7 @@ export const products: Product[] = [
     name: "MedLink Jobs",
     url: "https://medlinkjobs.com",
     domain: "medlinkjobs.com",
+    image: "/products/medlink.webp",
     company: "MedLink Jobs",
     period: "2022 — 2023",
     tagline: "India's healthcare job platform",
