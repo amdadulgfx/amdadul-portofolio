@@ -35,6 +35,7 @@ export type Job = {
   summary: string;
   highlights: string[];
   stack: string[];
+  products?: { name: string; url: string }[];
 };
 
 export const experience: Job[] = [
@@ -45,7 +46,7 @@ export const experience: Job[] = [
     period: "Nov 2023 — Present",
     current: true,
     summary:
-      "Lead backend engineer on an enterprise CRM and on the modernisation of legacy HRM systems.",
+      "Lead backend engineer on Gain.io, a CRM + helpdesk platform, and on modernising Payrun, an HR and payroll platform.",
     highlights: [
       "Own the CRM's backend architecture: an ECS core with a decoupled serverless layer for integrations and heavy jobs.",
       "Cut average response time by 35% by rewriting chatty data access into set-based SQL (joins + CTEs).",
@@ -53,6 +54,10 @@ export const experience: Job[] = [
       "Mentor junior developers, review code, and run sprint planning and architecture decisions.",
     ],
     stack: ["Node.js", "GraphQL", "PostgreSQL", "Sequelize", "AWS ECS", "Lambda", "SQS", "EventBridge"],
+    products: [
+      { name: "gain.io", url: "https://gain.io" },
+      { name: "payrun.app", url: "https://payrun.app" },
+    ],
   },
   {
     company: "Gordian Global Solutions",
@@ -73,13 +78,14 @@ export const experience: Job[] = [
     location: "Hyderabad, India · Remote",
     role: "Software Engineer · Lead",
     period: "Nov 2022 — Oct 2023",
-    summary: "Led development of a healthcare recruitment platform from build to launch.",
+    summary: "Led development of MedLink Jobs, India's healthcare job platform, from build to launch.",
     highlights: [
       "Built and launched a recruitment platform that grew past 50,000 users.",
       "Designed a serverless GraphQL backend on AppSync, Lambda and EventBridge over MySQL.",
       "Streamlined the deployment flow across environments for safer, faster releases.",
     ],
     stack: ["Node.js", "AWS AppSync", "Lambda", "EventBridge", "MySQL"],
+    products: [{ name: "medlinkjobs.com", url: "https://medlinkjobs.com" }],
   },
   {
     company: "Mimothi Solutions",
@@ -111,4 +117,60 @@ export const education = [
 export const extras = [
   "ICPC Asia Dhaka Regional — Preliminary, 2019",
   "Best Organizer, DIUDC National Debating Competition, 2017",
+];
+
+// Live products I've worked on. Descriptions are from each product's public site;
+// "role" is my contribution. Keep internal details and screenshots out unless approved.
+export type Product = {
+  name: string;
+  url: string;
+  domain: string;
+  company: string;
+  period: string;
+  tagline: string;
+  description: string;
+  role: string;
+  stack: string[];
+  caseStudy?: string;
+};
+
+export const products: Product[] = [
+  {
+    name: "Gain.io",
+    url: "https://gain.io",
+    domain: "gain.io",
+    company: "Gain Solutions",
+    period: "2023 — Present",
+    tagline: "CRM and helpdesk in one customer record",
+    description:
+      "Sales pipeline, deals, offers and meetings alongside tickets, live chat, SLAs and CSAT — with email and calendar integrations and mobile apps.",
+    role: "Backend project lead: core architecture, Gmail / Outlook / Calendar integrations, email analytics, AWS infrastructure.",
+    stack: ["Node.js", "GraphQL", "PostgreSQL", "AWS"],
+    caseStudy: "enterprise-crm",
+  },
+  {
+    name: "Payrun",
+    url: "https://payrun.app",
+    domain: "payrun.app",
+    company: "Gain Solutions",
+    period: "2023 — Present",
+    tagline: "All-in-one HR and payroll platform",
+    description:
+      "Employee management, attendance and timesheets, leave, hiring, payroll and expenses for growing teams across 150+ countries.",
+    role: "Upgraded legacy HRM backend systems for performance and maintainability.",
+    stack: ["Node.js", "PostgreSQL", "AWS"],
+  },
+  {
+    name: "MedLink Jobs",
+    url: "https://medlinkjobs.com",
+    domain: "medlinkjobs.com",
+    company: "MedLink Jobs",
+    period: "2022 — 2023",
+    tagline: "India's healthcare job platform",
+    description:
+      "A job marketplace connecting doctors, nurses, pharmacists and lab technicians with verified healthcare employers.",
+    role: "Engineering lead: built and launched the platform on a serverless GraphQL backend; grew past 50,000 users.",
+    stack: ["Node.js", "AppSync", "Lambda", "MySQL"],
+    caseStudy: "medlink-recruitment",
+  },
 ];

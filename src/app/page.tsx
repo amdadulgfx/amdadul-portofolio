@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Section from "@/components/Section";
 import { ArrowRight, ArrowUpRight, Download, GitHub, LinkedIn, Mail, Medium } from "@/components/Icons";
-import { education, experience, extras, profile, skills, stats } from "@/content/site";
+import { education, experience, extras, products, profile, skills, stats } from "@/content/site";
 import { caseStudies } from "@/content/work";
 import { notes } from "@/content/notes";
 import { getArticles } from "@/lib/medium";
@@ -85,6 +85,61 @@ export default async function Home() {
         </div>
       </section>
 
+      {/* ---------------- Products ---------------- */}
+      <Section
+        id="products"
+        eyebrow="Shipped products"
+        title="Live products I've helped build"
+        intro="Real software with real customers. Click through to see them in production."
+      >
+        <div className="grid gap-5 lg:grid-cols-3">
+          {products.map((p) => (
+            <article
+              key={p.name}
+              className="group flex flex-col overflow-hidden rounded-2xl border border-line bg-surface transition hover:border-accent/50"
+            >
+              {/* Browser-window frame */}
+              <a href={p.url} target="_blank" rel="noopener noreferrer" className="block border-b border-line bg-raised">
+                <div className="flex items-center gap-1.5 border-b border-line px-4 py-2.5">
+                  <span className="size-2.5 rounded-full bg-line" />
+                  <span className="size-2.5 rounded-full bg-line" />
+                  <span className="size-2.5 rounded-full bg-line" />
+                  <span className="ml-3 flex-1 truncate rounded-md bg-bg px-3 py-1 font-mono text-[11px] text-muted">
+                    https://{p.domain}
+                  </span>
+                </div>
+                <div className="relative px-6 py-8">
+                  <div className="glow pointer-events-none absolute inset-0 opacity-70" aria-hidden />
+                  <p className="relative text-2xl font-semibold tracking-tight">{p.name}</p>
+                  <p className="relative mt-1 text-sm text-muted">{p.tagline}</p>
+                </div>
+              </a>
+              <div className="flex flex-1 flex-col p-6">
+                <p className="font-mono text-xs text-muted">
+                  {p.company} · {p.period}
+                </p>
+                <p className="mt-3 text-sm leading-relaxed text-fg/85">{p.description}</p>
+                <p className="mt-4 text-sm leading-relaxed text-muted">
+                  <span className="text-accent">My role — </span>
+                  {p.role}
+                </p>
+                <p className="mt-4 font-mono text-[11px] text-muted">{p.stack.join(" · ")}</p>
+                <div className="mt-auto flex flex-wrap items-center gap-x-5 gap-y-2 pt-6 text-sm">
+                  <a href={p.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-fg hover:text-accent">
+                    Visit {p.domain} <ArrowUpRight />
+                  </a>
+                  {p.caseStudy && (
+                    <Link href={`/work/${p.caseStudy}/`} className="inline-flex items-center gap-1.5 text-muted hover:text-fg">
+                      Case study <ArrowRight />
+                    </Link>
+                  )}
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </Section>
+
       {/* ---------------- Work ---------------- */}
       <Section
         id="work"
@@ -165,6 +220,15 @@ export default async function Home() {
                       ))}
                     </ul>
                     <p className="mt-4 font-mono text-xs text-muted">{job.stack.join(" · ")}</p>
+                    {job.products && (
+                      <p className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-sm">
+                        {job.products.map((pr) => (
+                          <a key={pr.url} href={pr.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-accent hover:underline">
+                            {pr.name} <ArrowUpRight className="size-3.5" />
+                          </a>
+                        ))}
+                      </p>
+                    )}
                   </div>
                 </div>
               </li>

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Diagram from "@/components/Diagram";
-import { ArrowLeft, ArrowRight } from "@/components/Icons";
+import { ArrowLeft, ArrowRight, ArrowUpRight } from "@/components/Icons";
 import { caseStudies, getCaseStudy } from "@/content/work";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -45,6 +45,16 @@ export default async function CaseStudyPage({ params }: Props) {
         </p>
         <h1 className="mt-4 text-3xl font-semibold tracking-tight text-balance sm:text-5xl">{c.title}</h1>
         <p className="mt-5 text-lg text-muted text-pretty">{c.summary}</p>
+        {c.product && (
+          <a
+            href={c.product.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-6 inline-flex items-center gap-2 rounded-lg border border-line bg-surface px-3.5 py-2 text-sm transition hover:border-accent/60"
+          >
+            <span className="size-2 rounded-full bg-ok" /> Live product: {c.product.name} <ArrowUpRight />
+          </a>
+        )}
 
         <dl className="mt-8 grid grid-cols-2 gap-6 border-y border-line py-6 font-mono text-xs sm:grid-cols-3">
           <div>

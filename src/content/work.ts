@@ -16,12 +16,14 @@ export type CaseStudy = {
   lesson: string;
   diagram: DiagramSpec;
   diagramCaption: string;
+  product?: { name: string; url: string };
 };
 
 export const caseStudies: CaseStudy[] = [
   {
     slug: "enterprise-crm",
-    title: "Enterprise CRM that scales from thousands to millions of records",
+    title: "Gain.io: a CRM that scales from thousands to millions of records",
+    product: { name: "gain.io", url: "https://gain.io" },
     company: "Gain Solutions",
     role: "Backend Project Lead",
     period: "2023 — Present",
@@ -34,7 +36,7 @@ export const caseStudies: CaseStudy[] = [
       { value: "Async", label: "email send — no waiting on providers" },
     ],
     context:
-      "The CRM helps large sales teams run their whole pipeline — from first contact with a lead to closing the deal and tracking revenue. It integrates deeply with Gmail, Outlook, Google Calendar and Stripe, and enterprise clients bring data sets that grow from thousands to millions of records.",
+      "Gain.io is a CRM and helpdesk platform. It helps sales teams run their whole pipeline — from first contact with a lead to closing the deal and tracking revenue. It integrates deeply with Gmail, Outlook, Google Calendar and Stripe, and enterprise clients bring data sets that grow from thousands to millions of records.",
     problem:
       "A single monolithic API would have to do everything: serve the UI, enforce permissions, and also run long, bursty integration work like syncing a mailbox or importing a large contact list. That work would starve the API and blow through serverless execution limits if moved naively to Lambda.",
     approach: [
@@ -92,6 +94,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "email-analytics",
     title: "Email analytics when the provider gives you none",
+    product: { name: "gain.io", url: "https://gain.io" },
     company: "Gain Solutions",
     role: "Backend Project Lead",
     period: "CRM feature",
@@ -154,7 +157,8 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "medlink-recruitment",
-    title: "Serverless recruitment platform to 50,000+ users",
+    title: "MedLink Jobs: a serverless job platform to 50,000+ users",
+    product: { name: "medlinkjobs.com", url: "https://medlinkjobs.com" },
     company: "MedLink Jobs",
     role: "Software Engineer · Lead",
     period: "2022 — 2023",

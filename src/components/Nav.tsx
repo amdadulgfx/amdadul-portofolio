@@ -3,7 +3,8 @@ import { profile } from "@/content/site";
 import { Download } from "./Icons";
 
 const links = [
-  { href: "/#work", label: "Work" },
+  { href: "/#products", label: "Products" },
+  { href: "/#work", label: "Case studies" },
   { href: "/#experience", label: "Experience" },
   { href: "/#writing", label: "Writing" },
   { href: "/#about", label: "About" },
