@@ -1,5 +1,12 @@
 // Single source of truth for the site's copy. Edit here, not in components.
 
+// Feature flags. Flip to true to bring a section back.
+export const features = {
+  // Case studies: hides the section, nav link and "Case study" links. The /work/* pages
+  // still build (marked noindex, left out of the sitemap) so turning this on is instant.
+  caseStudies: false,
+};
+
 export const profile = {
   name: "Md Amdadul Haq Arif",
   shortName: "Arif",

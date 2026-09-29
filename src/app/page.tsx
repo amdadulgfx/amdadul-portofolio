@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Section from "@/components/Section";
 import { ArrowRight, ArrowUpRight, Download, GitHub, LinkedIn, Mail, Medium } from "@/components/Icons";
-import { education, experience, extras, products, profile, skills, stats } from "@/content/site";
+import { education, experience, extras, features, products, profile, skills, stats } from "@/content/site";
 import { caseStudies } from "@/content/work";
 import { notes } from "@/content/notes";
 import { getArticles } from "@/lib/medium";
@@ -37,10 +37,10 @@ export default async function Home() {
             </p>
             <div className="rise rise-4 mt-8 flex flex-wrap items-center gap-3">
               <Link
-                href="#work"
+                href={features.caseStudies ? "#work" : "#products"}
                 className="inline-flex items-center gap-2 rounded-lg bg-accent px-4 py-2.5 text-sm font-medium text-bg transition hover:brightness-110"
               >
-                See case studies <ArrowRight />
+                See my work <ArrowRight />
               </Link>
               <a
                 href={`mailto:${profile.email}`}
@@ -134,7 +134,7 @@ export default async function Home() {
                   <a href={p.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-fg hover:text-accent">
                     Visit {p.domain} <ArrowUpRight />
                   </a>
-                  {p.caseStudy && (
+                  {features.caseStudies && p.caseStudy && (
                     <Link href={`/work/${p.caseStudy}/`} className="inline-flex items-center gap-1.5 text-muted hover:text-fg">
                       Case study <ArrowRight />
                     </Link>
@@ -146,7 +146,8 @@ export default async function Home() {
         </div>
       </Section>
 
-      {/* ---------------- Work ---------------- */}
+      {/* ---------------- Work (case studies) ---------------- */}
+      {features.caseStudies && (
       <Section
         id="work"
         eyebrow="Selected work"
@@ -187,6 +188,8 @@ export default async function Home() {
           ))}
         </div>
       </Section>
+
+      )}
 
       {/* ---------------- Experience ---------------- */}
       <div className="border-y border-line/60 bg-surface/40">

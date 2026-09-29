@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import Diagram from "@/components/Diagram";
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "@/components/Icons";
 import { caseStudies, getCaseStudy } from "@/content/work";
+import { features } from "@/content/site";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -21,6 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: c.title,
     description: c.summary,
     alternates: { canonical: `/work/${c.slug}/` },
+    robots: features.caseStudies ? undefined : { index: false, follow: false },
     openGraph: { title: c.title, description: c.summary, images: ["/og.png"] },
   };
 }
