@@ -198,8 +198,8 @@ export default async function Home() {
           eyebrow="Experience"
           title="Four years, four product teams"
           action={
-            <a href={profile.resume} className="inline-flex items-center gap-2 text-sm text-muted hover:text-fg">
-              <Download className="size-4 text-accent" /> Download resume (PDF)
+            <a href={profile.resume} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm text-muted hover:text-fg">
+              <Download className="size-4 text-accent" /> View resume
             </a>
           }
         >

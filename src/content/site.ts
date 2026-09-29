@@ -15,7 +15,8 @@ export const profile = {
   availability: "Open to senior roles · Remote",
   email: "arifhaq24m@gmail.com",
   url: "https://aharif.xyz",
-  resume: "/Amdadul-Haq-Arif-Resume.pdf",
+  // Resume lives on Google Drive so it can be updated without redeploying.
+  resume: "https://drive.google.com/file/d/1QLmOzO6R8am0b7IgiT4vAp-AmeiQeTzj/view?usp=sharing",
   headline: "I design and ship backends that stay fast as the data grows.",
   intro:
     "Senior full stack engineer with 4+ years building SaaS products on Node.js, PostgreSQL and AWS — and the React front ends that sit on top of them. Currently Backend Project Lead at Gain Solutions Ltd, where I own the architecture of an enterprise CRM.",

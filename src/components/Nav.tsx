@@ -36,6 +36,8 @@ export default function Nav() {
         <div className="flex items-center gap-2">
           <a
             href={profile.resume}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-lg border border-line bg-surface px-3 py-2 text-sm text-fg transition hover:border-accent/60"
           >
             <Download className="size-4 text-accent" /> Resume
