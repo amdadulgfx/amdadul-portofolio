@@ -82,10 +82,10 @@ export default async function Home() {
         intro="Real software with real customers. Click through to see them in production."
       >
         <div className="grid gap-5 lg:grid-cols-3">
-          {products.map((p) => (
+          {products.map((p, i) => (
+            <div key={p.name} data-reveal style={{ "--d": `${i * 110}ms` } as React.CSSProperties}>
             <article
-              key={p.name}
-              className="group flex flex-col overflow-hidden rounded-2xl border border-line bg-surface transition hover:border-accent/50"
+              className="group flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-surface transition duration-300 hover:-translate-y-1 hover:border-accent/50 hover:shadow-2xl hover:shadow-black/40"
             >
               {/* Browser-window frame */}
               <a href={p.url} target="_blank" rel="noopener noreferrer" className="block border-b border-line bg-raised">
@@ -127,6 +127,7 @@ export default async function Home() {
                 </div>
               </div>
             </article>
+            </div>
           ))}
         </div>
       </Section>
@@ -190,7 +191,7 @@ export default async function Home() {
         >
           <ol className="relative space-y-12 border-l border-line pl-6 sm:pl-10">
             {experience.map((job) => (
-              <li key={job.company} className="relative">
+              <li key={job.company} data-reveal className="relative">
                 <span
                   className={`absolute -left-[29px] top-1.5 size-2.5 rounded-full ring-4 ring-bg sm:-left-[45px] ${job.current ? "bg-accent" : "bg-line"}`}
                   aria-hidden
@@ -234,8 +235,8 @@ export default async function Home() {
       {/* ---------------- Skills ---------------- */}
       <Section id="skills" eyebrow="Toolbox" title="What I work with">
         <div className="grid gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-2 lg:grid-cols-3">
-          {skills.map((g) => (
-            <div key={g.group} className="bg-surface p-6">
+          {skills.map((g, i) => (
+            <div key={g.group} data-reveal style={{ "--d": `${(i % 3) * 90}ms` } as React.CSSProperties} className="bg-surface p-6">
               <h3 className="font-mono text-xs uppercase tracking-[0.16em] text-muted">{g.group}</h3>
               <ul className="mt-4 flex flex-wrap gap-2">
                 {g.items.map((s) => (
@@ -264,7 +265,7 @@ export default async function Home() {
         >
           <ul className="divide-y divide-line border-y border-line">
             {articles.map((a) => (
-              <li key={a.url}>
+              <li key={a.url} data-reveal>
                 <a
                   href={a.url}
                   className="group grid gap-2 py-5 sm:grid-cols-[110px_1fr_auto] sm:items-center sm:gap-6"
@@ -292,7 +293,7 @@ export default async function Home() {
       <Section id="notes" eyebrow="How I work" title="Principles I build by">
         <ol className="grid gap-px overflow-hidden rounded-2xl border border-line bg-line md:grid-cols-2">
           {notes.map((n, i) => (
-            <li key={n.title} className="bg-surface p-6 sm:p-8">
+            <li key={n.title} data-reveal style={{ "--d": `${(i % 2) * 110}ms` } as React.CSSProperties} className="bg-surface p-6 sm:p-8">
               <div className="flex items-center gap-3 font-mono text-xs">
                 <span className="text-accent">{String(i + 1).padStart(2, "0")}</span>
                 <span className="text-muted">{n.tag}</span>
@@ -362,7 +363,7 @@ export default async function Home() {
 
       {/* ---------------- Contact ---------------- */}
       <section id="contact" className="mx-auto max-w-6xl px-5 py-24 sm:px-8 sm:py-32">
-        <div className="relative overflow-hidden rounded-3xl border border-line bg-surface px-6 py-14 text-center sm:px-12 sm:py-20">
+        <div data-reveal className="relative overflow-hidden rounded-3xl border border-line bg-surface px-6 py-14 text-center sm:px-12 sm:py-20">
           <div className="glow pointer-events-none absolute inset-0" aria-hidden />
           <p className="relative font-mono text-xs uppercase tracking-[0.18em] text-accent">Contact</p>
           <h2 className="relative mx-auto mt-4 max-w-2xl text-3xl font-semibold tracking-tight text-balance sm:text-5xl">
